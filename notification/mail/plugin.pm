@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-package notification::slack::plugin;
+package notification::mail::plugin;
 
 use strict;
 use warnings;
@@ -31,8 +31,7 @@ sub new {
 
     $self->{version} = '0.1';
     %{$self->{modes}} = (
-                         'alert'            => 'notification::slack::mode::alert',
-                         'alert2'           => 'notification::slack::mode::alert2'
+                         'alert'            => 'notification::mail::mode::alert'
                          );
 
     return $self;
@@ -44,6 +43,6 @@ __END__
 
 =head1 PLUGIN DESCRIPTION
 
-Send Slack notifications.
+Send mail notifications.
 
 =cut
